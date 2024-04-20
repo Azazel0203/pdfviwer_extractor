@@ -17,7 +17,7 @@ def ml_part(filename, upload_folder):
     
     
     
-    model = lp.Detectron2LayoutModel('lp://PubLayNet/mask_rcnn_X_101_32x8d_FPN_3x/config',
+    model = lp.Detectron2LayoutModel('config.yaml',
                                      extra_config=["MODEL.ROI_HEADS.SCORE_THRESH_TEST", 0.4],
                                      label_map={0: "Text"})
     result = []
